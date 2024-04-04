@@ -1,0 +1,59 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Elote</title>
+  </head>
+  <body>
+    <h1>Proporciona La Informacion De Tu Tierra Para Cosechar Elote</h1>
+    <form action="script.js" method="">
+      <fieldset>
+        <legend><h3>Mi Tierra</h3></legend>
+
+        <label for="Temperature">Temperatura: </label><br />
+        <input
+          type="number"
+          id="Temperature"
+          name="Temperatura"
+          placeholder="C°"
+          autofocus
+        /><br />
+        <br />
+
+        <label for="pH">pH: </label><br />
+        <input type="number" id="pH" name="pH" placeholder="pH" /><br /><br />
+
+        <label for="humidity">Humedad: </label><br />
+        <input
+          type="text"
+          id="humidity"
+          name="Humedad"
+          placeholder="Humedad"
+        /><br /><br />
+
+        <fieldset>
+          <legend><h4>Plagas</h4></legend>
+
+          <label for="Pests">Has Teniodo Plagas En tu Cosecha? </label
+          ><br /><br />
+          <input type="radio" id="SI" name="Plagas" value="SI" />
+          <label for="si">SI</label><br /><br />
+          <input type="radio" id="NO" name="Plagas" value="NO" />
+          <label for="no">NO</label><br /><br />
+          <label for="Cuales">Que Tipo De Plagas?:</label><br />
+          <textarea
+            name="Description"
+            id="Description"
+            cols="50"
+            rows="5"
+            placeholder="Ingresa cuales"
+          ></textarea>
+        </fieldset>
+      </fieldset>
+      <br /><br />
+      <input type="submit" value="Enviar" />
+      <input type="reset" value="Borrar" />
+    </form>
+  </body>
+</html>
