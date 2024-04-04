@@ -4,54 +4,111 @@
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>Lechuga</title>
+    <style>
+      body {
+        font-family: Arial, sans-serif;
+        margin: 0;
+        padding: 20px;
+        background-color: #eaf7e3; /* Verde claro para el fondo */
+      }
+      h1 {
+        text-align: center;
+        color: #1a6938; /* Verde oscuro para el título */
+      }
+      form {
+        max-width: 600px;
+        margin: 0 auto;
+        background-color: #ffffff;
+        padding: 20px;
+        border-radius: 10px;
+        box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+      }
+      fieldset {
+        border: none;
+        margin-bottom: 20px;
+      }
+      legend {
+        font-size: 1.2em;
+        font-weight: bold;
+        color: #1a6938;
+      }
+      label {
+        display: block;
+        margin-bottom: 5px;
+        color: #333;
+      }
+      input,
+      textarea {
+        width: 100%;
+        padding: 10px;
+        margin-bottom: 10px;
+        border: 1px solid #156b39;
+        border-radius: 5px;
+        box-sizing: border-box;
+      }
+      input[type="submit"],
+      input[type="reset"] {
+        width: auto;
+        padding: 10px 20px;
+        margin-right: 10px;
+        background-color: #156b39;
+        color: #fff;
+        border: none;
+        border-radius: 5px;
+        cursor: pointer;
+      }
+      input[type="submit"]:hover,
+      input[type="reset"]:hover {
+        background-color: #1a6938;
+      }
+    </style>
   </head>
   <body>
-    <h1>Proporciona La Informacion De Tu Tierra Para Cosechar Lechuga</h1>
-    <form action="script.js" method="">
+    <h1>Proporciona la información de tu tierra para cosechar lechuga</h1>
+    <form action="script.js" method="POST">
       <fieldset>
-        <legend><h3>Mi Tierra</h3></legend>
+        <legend>Mi Tierra</legend>
 
-        <label for="Temperature">Temperatura: </label><br />
+        <label for="Temperature">Temperatura (°C):</label>
         <input
           type="number"
           id="Temperature"
           name="Temperatura"
-          placeholder="C°"
+          placeholder="Ingrese la temperatura"
           autofocus
-        /><br />
-        <br />
+        />
 
-        <label for="pH">pH: </label><br />
-        <input type="number" id="pH" name="pH" placeholder="pH" /><br /><br />
+        <label for="pH">pH:</label>
+        <input type="number" id="pH" name="pH" placeholder="Ingrese el pH" />
 
-        <label for="humidity">Humedad: </label><br />
+        <label for="humidity">Humedad:</label>
         <input
           type="text"
           id="humidity"
           name="Humedad"
-          placeholder="Humedad"
-        /><br /><br />
-
-        <fieldset>
-          <legend><h4>Plagas</h4></legend>
-
-          <label for="Pests">Has Teniodo Plagas En tu Cosecha? </label
-          ><br /><br />
-          <input type="radio" id="SI" name="Plagas" value="SI" />
-          <label for="si">SI</label><br /><br />
-          <input type="radio" id="NO" name="Plagas" value="NO" />
-          <label for="no">NO</label><br /><br />
-          <label for="Cuales">Que Tipo De Plagas?:</label><br />
-          <textarea
-            name="Description"
-            id="Description"
-            cols="50"
-            rows="5"
-            placeholder="Ingresa cuales"
-          ></textarea>
-        </fieldset>
+          placeholder="Ingrese la humedad"
+        />
       </fieldset>
-      <br /><br />
+
+      <fieldset>
+        <legend>Plagas</legend>
+
+        <label>¿Has tenido plagas en tu cosecha?</label>
+        <input type="radio" id="SI" name="Plagas" value="SI" />
+        <label for="si">Sí</label>
+        <input type="radio" id="NO" name="Plagas" value="NO" />
+        <label for="no">No</label>
+
+        <label for="Cuales">¿Qué tipo de plagas?:</label>
+        <textarea
+          name="Description"
+          id="Description"
+          cols="50"
+          rows="5"
+          placeholder="Ingrese el tipo de plagas"
+        ></textarea>
+      </fieldset>
+
       <input type="submit" value="Enviar" />
       <input type="reset" value="Borrar" />
     </form>
